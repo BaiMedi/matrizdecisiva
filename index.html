@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategias para Progresar con Pasos Imperfectos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #F2F8FD;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #00344B;
+        }
+        textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e1f5fe;
+            border: 1px solid #81d4fa;
+            border-radius: 5px;
+            color: #0277bd;
+            font-weight: bold;
+        }
+        .cta-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta-container p {
+            color: #00344B;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .cta-container a {
+            display: inline-block;
+            background-color: #00DC42;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .cta-container a:hover {
+            background-color: #00c03a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Estrategias para Progresar con Pasos Imperfectos</h1>
+        <p>Completa este ejercicio para identificar tu siguiente paso, incluso si no es perfecto. ¡El progreso comienza con acción!</p>
+
+        <form id="progress-form">
+            <label for="goal">¿Qué meta quieres alcanzar?</label>
+            <textarea id="goal" placeholder="Ejemplo: Publicar contenido en redes sociales consistentemente"></textarea>
+
+            <label for="fear">¿Qué te detiene o preocupa al dar el siguiente paso?</label>
+            <textarea id="fear" placeholder="Ejemplo: No sé si será lo suficientemente bueno"></textarea>
+
+            <button type="button" onclick="generateNextStep()">Definir Siguiente Paso</button>
+        </form>
+
+        <div id="result" class="result" style="display: none;"></div>
+
+        <div class="cta-container">
+            <p>REVOLUCIONA TU NEGOCIO CON EL PODER DEL CHAT INTELIGENTE</p>
+            <a href="https://klicana.work/tdivKK" target="_blank">SÍ, QUIERO INSCRIBIRME AHORA EN LUCRACHAT IA</a>
+        </div>
+    </div>
+
+    <script>
+        function generateNextStep() {
+            const goal = document.getElementById("goal").value.trim();
+            const fear = document.getElementById("fear").value.trim();
+
+            if (!goal || !fear) {
+                document.getElementById("result").style.display = "block";
+                document.getElementById("result").textContent = "Por favor, completa todos los campos para generar tu estrategia.";
+                return;
+            }
+
+            const advice = `
+                <strong>Siguiente paso hacia tu meta:</strong><br>
+                - No esperes que sea perfecto. Comienza con un borrador o prototipo.<br>
+                - Recuerda: "Cada paso imperfecto es mejor que quedarse en la misma posición".<br>
+                <strong>Recomendación:</strong> Usa herramientas para simplificar el proceso o busca un mentor para apoyo adicional.
+            `;
+
+            document.getElementById("result").style.display = "block";
+            document.getElementById("result").innerHTML = advice;
+        }
+    </script>
+</body>
+</html>
