@@ -97,12 +97,17 @@
                 return;
             }
 
-            const advice = `
-                <strong>Siguiente paso hacia tu meta:</strong><br>
-                - No esperes que sea perfecto. Comienza con un borrador o prototipo.<br>
-                - Recuerda: "Cada paso imperfecto es mejor que quedarse en la misma posición".<br>
-                <strong>Recomendación:</strong> Usa herramientas para simplificar el proceso o busca un mentor para apoyo adicional.
-            `;
+            // Estrategias combinadas para enfrentar la mentalidad de perfeccionismo
+            let advice = `<strong>Siguiente paso hacia tu meta:</strong><br>`;
+            advice += `1. <strong>Replantea la percepción de "imperfecto":</strong> No necesitas ser perfecto, solo necesitas ser suficientemente bueno para avanzar. Define qué significa "suficientemente bien" para esta meta y sigue adelante.<br>`;
+            advice += `2. <strong>Enfócate en la acción, no en el resultado:</strong> Da valor al simple hecho de actuar. Cada pequeño paso, por imperfecto que sea, te está acercando a tu objetivo. Divide tu objetivo en micro-metas y celebra cada pequeño avance que logres.<br>`;
+            advice += `3. <strong>Cambia tu diálogo interno:</strong> Cambia frases como "${fear}" por "esto es un buen comienzo" o "cada intento me acerca un poco más". Recuérdate que todos los grandes logros comienzan con versiones imperfectas.<br>`;
+            advice += `4. <strong>Progresar haciendo:</strong> Considera este próximo paso como una versión preliminar, una versión beta. Lo importante es que estás iterando y mejorando con cada intento. Dale importancia a la práctica continua.<br>`;
+            advice += `5. <strong>Rodéate de perspectivas positivas:</strong> Comparte tu objetivo con alguien de confianza que haya pasado por desafíos similares. Escuchar cómo otros superaron la sensación de imperfección te ayudará a seguir avanzando.<br>`;
+            advice += `6. <strong>Implementa el mantra del "1% mejor cada día":</strong> Pregúntate cada día: "¿Qué puedo hacer hoy, aunque sea pequeño, para mejorar un 1%?" Lleva un diario de tu progreso y celebra cada mejora.<br>`;
+            advice += `7. <strong>Acepta la vulnerabilidad:</strong> Comparte tus pasos imperfectos públicamente, si puedes. Al hacerlo, reconocerás que no estás solo y verás que cada paso imperfecto inspira a otros.<br>`;
+
+            advice += `<p><strong>Recuerda:</strong> El progreso verdadero no viene de evitar los errores, sino de moverse a pesar de ellos. ¡Cada paso imperfecto es una señal de que estás avanzando y que te acercas cada vez más a tu meta!</p>`;
 
             document.getElementById("result").style.display = "block";
             document.getElementById("result").innerHTML = advice;
